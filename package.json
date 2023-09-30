@@ -20,6 +20,7 @@
     "concurrently": "^8.2.1",
     "cors": "^2.8.5",
     "dotenv": "^16.3.1",
+    "eslint-plugin-react-hooks": "^5.0.0-canary-d900fadbf-20230929",
     "express": "^4.18.2",
     "express-formidable": "^1.2.0",
     "formidable": "^3.5.1",
