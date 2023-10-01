@@ -2,7 +2,7 @@ import React from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 import { Helmet } from "react-helmet";
-// import { ToastContainer } from "react-toastify";
+import { ToastContainer } from "react-toastify";
 import { Toaster, ToastBar } from "react-hot-toast";
 
 const Layout = ({ children, title, description, keywords, author }) => {
