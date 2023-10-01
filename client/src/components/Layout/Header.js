@@ -38,7 +38,13 @@ const Header = () => {
           </button>
           <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
             <Link to="/" className="navbar-brand">
-              <GiShoppingBag /> Artisan
+              <img
+                src="/images/logo.png"
+                className="logo-img"
+                alt="bannerimage"
+                width={"170px"}
+                height={"50px"}
+              />
             </Link>
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
               <SearchInput />

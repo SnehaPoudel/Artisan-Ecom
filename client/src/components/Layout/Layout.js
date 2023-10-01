@@ -30,7 +30,7 @@ const Layout = ({ children, title, description, keywords, author }) => {
             />
           )}
         </Toaster>
-        ;{children}
+        {children}
       </main>
       <Footer />
     </div>
