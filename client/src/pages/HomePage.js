@@ -49,7 +49,7 @@ const HomePage = () => {
     }
   };
 
-  //getTOtal COunt
+  //getTotal COunt
   const getTotal = async () => {
     try {
       const { data } = await axios.get("/api/v1/products/product-count");
