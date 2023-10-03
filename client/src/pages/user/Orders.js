@@ -22,7 +22,7 @@ const Orders = () => {
   }, [auth?.token]);
   return (
     <Layout title={"Your Orders"}>
-      <div className="container-flui p-3 m-3 dashboard">
+      <div className="container-fluid p-3 m-3 dashboard">
         <div className="row">
           <div className="col-md-3">
             <UserMenu />
@@ -62,7 +62,7 @@ const Orders = () => {
                             src={`/api/v1/products/product-photo/${p._id}`}
                             className="card-img-top"
                             alt={p.name}
-                            width="100px"
+                            width="5px"
                             height={"100px"}
                           />
                         </div>
