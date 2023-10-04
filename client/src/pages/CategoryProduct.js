@@ -2,9 +2,13 @@ import React, { useState, useEffect } from "react";
 import Layout from "../components/Layout/Layout";
 import { useParams, useNavigate } from "react-router-dom";
 import "../styles/CategoryProductStyles.css";
+import { useCart } from "../context/cart";
 import axios from "axios";
+import toast from "react-hot-toast";
+
 const CategoryProduct = () => {
   const params = useParams();
+  const [cart, setCart] = useCart();
   const navigate = useNavigate();
   const [products, setProducts] = useState([]);
   const [category, setCategory] = useState([]);
@@ -43,9 +47,9 @@ const CategoryProduct = () => {
                     <div className="card-name-price">
                       <h5 className="card-title">{p.name}</h5>
                       <h5 className="card-title card-price">
-                        {p.price.toLocaleString("en-US", {
+                        {p.price.toLocaleString("ne-NP", {
                           style: "currency",
-                          currency: "USD",
+                          currency: "NPR",
                         })}
                       </h5>
                     </div>
@@ -59,19 +63,19 @@ const CategoryProduct = () => {
                       >
                         More Details
                       </button>
-                      {/* <button
-                    className="btn btn-dark ms-1"
-                    onClick={() => {
-                      setCart([...cart, p]);
-                      localStorage.setItem(
-                        "cart",
-                        JSON.stringify([...cart, p])
-                      );
-                      toast.success("Item Added to cart");
-                    }}
-                  >
-                    ADD TO CART
-                  </button> */}
+                      <button
+                        className="btn btn-dark ms-1"
+                        onClick={() => {
+                          setCart([...cart, p]);
+                          localStorage.setItem(
+                            "cart",
+                            JSON.stringify([...cart, p])
+                          );
+                          toast.success("Item Added to cart");
+                        }}
+                      >
+                        ADD TO CART
+                      </button>
                     </div>
                   </div>
                 </div>

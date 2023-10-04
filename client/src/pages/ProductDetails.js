@@ -2,10 +2,13 @@ import React, { useState, useEffect } from "react";
 import Layout from "./../components/Layout/Layout";
 import axios from "axios";
 import { useParams, useNavigate } from "react-router-dom";
+import { useCart } from "../context/cart";
+import toast from "react-hot-toast";
 import "../styles/ProductDetailsStyles.css";
 
 const ProductDetails = () => {
   const params = useParams();
+  const [cart, setCart] = useCart();
   const navigate = useNavigate();
   const [product, setProduct] = useState({});
   const [relatedProducts, setRelatedProducts] = useState([]);
@@ -45,8 +48,7 @@ const ProductDetails = () => {
             src={`/api/v1/products/product-photo/${product._id}`}
             className="card-img-top"
             alt={product.name}
-            height="300"
-            width={"350px"}
+            width={"100px"}
           />
         </div>
         <div className="col-md-6 product-details-info">
@@ -56,13 +58,22 @@ const ProductDetails = () => {
           <h6>Description : {product.description}</h6>
           <h6>
             Price :
-            {product?.price?.toLocaleString("en-US", {
+            {product?.price?.toLocaleString("ne-NP", {
               style: "currency",
-              currency: "USD",
+              currency: "NPR",
             })}
           </h6>
           <h6>Category : {product?.category?.name}</h6>
-          <button class="btn btn-secondary ms-1">ADD TO CART</button>
+          <button
+            class="btn btn-secondary ms-1"
+            onClick={() => {
+              setCart([...cart, product]);
+              localStorage.setItem("cart", JSON.stringify([...cart, product]));
+              toast.success("Item Added to cart");
+            }}
+          >
+            ADD TO CART
+          </button>
         </div>
       </div>
       <hr />
@@ -83,9 +94,9 @@ const ProductDetails = () => {
                 <div className="card-name-price">
                   <h5 className="card-title">{p.name}</h5>
                   <h5 className="card-title card-price">
-                    {p.price.toLocaleString("en-US", {
+                    {p.price.toLocaleString("ne-NP", {
                       style: "currency",
-                      currency: "USD",
+                      currency: "NPR",
                     })}
                   </h5>
                 </div>

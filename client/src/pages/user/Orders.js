@@ -63,7 +63,7 @@ const Orders = () => {
                             className="card-img-top"
                             alt={p.name}
                             width="5px"
-                            height={"100px"}
+                            height={"400px"}
                           />
                         </div>
                         <div className="col-md-8">

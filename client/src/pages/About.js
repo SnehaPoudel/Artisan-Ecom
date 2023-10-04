@@ -4,68 +4,37 @@ import Layout from "./../components/Layout/Layout";
 const About = () => {
   return (
     <Layout title={"About us - Ecommer app"}>
-      <div className="responsive-container-block bigContainer">
-        <div className="responsive-container-block Container">
-          <div className="responsive-container-block leftSide">
-            <p className="text-blk heading">Meet Our Creative Team</p>
-            <p className="text-blk subHeading">
-              Semaj Africa is an online education platform that delivers video
-              courses, programs and resources for Individual, Advertising &amp;
-              Media Specialist, Online Marketing Professionals, Freelancers and
-              anyone looking to pursue a career in digital marketing,
-              Accounting, Web development, Programming. Multimedia and CAD
-              design.
-            </p>
-          </div>
-          <div className="responsive-container-block rightSide">
-            <img
-              className="number1img"
-              src="/client/src/images/1.jpg"
-              alt="image1"
-            />
-            <img
-              className="number2img"
-              src="/client/src/images/2.jpg"
-              alt="image2"
-            />
-            <img
-              className="number3img"
-              src="/client/src/images/3.jpg"
-              alt="image3"
-            />
-            <img
-              className="number5img"
-              src="/client/src/images/4.jpg"
-              alt="image4"
-            />
-            <img
-              className="number7img"
-              src="/client/src/images/5.jpg"
-              alt="image5"
-            />
-          </div>
-        </div>
-      </div>
-
-      {/* <div className="row contactus ">
-        <div className="col-md-6 ">
+      <div className="container">
+        <div className="row contactus ">
+          {/* <div className="col-md-6 ">
           <img
             src="/images/about.jpeg"
             alt="contactus"
             style={{ width: "100%" }}
           />
+        </div> */}
+          <div className="col-md-9">
+            <h1>About Us</h1>
+            <p className="text-justify mt-2">
+              E-commerce Website for Artisans of Nepal, our mission is to
+              celebrate and empower the talented artisans of Nepal by providing
+              them with a platform to showcase their exquisite craftsmanship to
+              the world. We believe in preserving and promoting the rich
+              cultural heritage of Nepal through handmade, authentic products.
+              Our e-commerce platform brings together a diverse range of
+              artisanal creations, including traditional handicrafts, textiles,
+              jewelry, and more, allowing customers worldwide to connect
+              directly with the artisans behind these unique pieces. By
+              supporting our initiative, you not only acquire exceptional and
+              ethically-made products but also contribute to the livelihoods of
+              these skilled artisans, helping them sustain their age-old
+              traditions while fostering economic growth in Nepal's rural
+              communities. Join us on this journey to celebrate Nepal's artisans
+              and their remarkable artistry.
+            </p>
+          </div>
         </div>
-        <div className="col-md-4">
-          <p className="text-justify mt-2">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus
-            officiis obcaecati esse tempore unde ratione, eveniet mollitia,
-            perferendis eius temporibus dicta blanditiis doloremque explicabo
-            quasi sunt vero optio cum aperiam vel consectetur! Laborum enim
-            accusantium atque, excepturi sapiente amet! Tenetur ducimus aut
-            commodi illum quidem neque tempora nam.
-          </p>
-        </div>
-      </div> */}
+      </div>
     </Layout>
   );
 };
