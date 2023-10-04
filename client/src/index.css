@@ -6,74 +6,96 @@
   box-sizing: border-box;
 }
 
-/* font-family: 'Poppins', sans-serif; */
-/* font-family: 'Playfair Display', serif; */
-
 /* //navbar css */
+/* Navigation Bar Styling */
 .navbar {
+  background-color: #ffffff; /* Background color for the navbar */
   font-family: "Poppins", sans-serif;
-  font-size: 17px;
-  line-height: 26px;
+  font-size: 18px;
+  font-weight: 500;
   text-transform: uppercase;
-  box-shadow: 0 8px 6px -6px gray;
-  --webkit-box-shadow: 0 8px 6px -6px gray;
-  border-bottom: solid gray !important;
 }
 
+/* Navigation Links */
 .nav-link {
-  font-weight: 300 !important;
+  font-weight: 400; /* Adjusted font weight for better readability */
+  color: #333; /* Dark text color */
+  transition: color 0.3s; /* Smooth color transition on hover */
 }
 
+.nav-link:hover {
+  color: #000; /* Darker text color on hover */
+}
+
+/* Active Link */
 .active {
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid #000; /* Thicker black underline for active link */
 }
 
+/* Navbar Brand */
 .navbar-brand {
+  font-family: "Roboto", sans-serif;
   font-weight: 700;
-  font-family: "roboto", sans-serif;
-  letter-spacing: 3px;
+  letter-spacing: 2px;
+  color: #000; /* Dark text color for the brand */
 }
 
+/* Search Form */
 .search-form {
-  margin-right: 10px;
-  margin-top: 4px;
+  margin-right: 20px; /* Increased right margin for spacing */
+  margin-top: 8px; /* Adjusted top margin for alignment */
+  position: relative; /* Added relative positioning for the input and button */
 }
+
 .search-form input {
-  border: none;
-  border-radius: 0;
+  border: 2px solid #ccc; /* Added a subtle border to the input */
+  border-radius: 4px;
+  padding: 8px 12px; /* Adjusted padding for better input size */
+  width: 200px; /* Adjusted input width */
+  font-size: 16px; /* Slightly smaller font size for the input */
 }
+
 .search-form button {
-  background-color: #000000;
-  border-radius: 0;
+  background-color: #000;
+  border: none;
+  border-radius: 4px;
   color: white;
+  padding: 8px 16px; /* Adjusted padding for better button size */
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* Responsive Navigation */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 10px; /* Added padding for mobile responsiveness */
+  }
+
+  .navbar-brand {
+    font-size: 24px; /* Increased font size for the brand on smaller screens */
+  }
 }
 
 /* =============================
 ==========footer============= */
 
 .footer {
-  color: white;
-  padding: 25px;
-  background: white;
-
-  bottom: 0;
   left: 0;
   width: 100%;
-
   text-align: center;
 }
 
 .footer a {
   text-decoration: none;
-  color: rgb(0, 0, 0);
+  color: white;
   font-weight: 500;
   padding: 10px;
 }
 
 .footer h1 {
-  color: #000000;
-  font-weight: 500;
-  font-size: 25px;
+  color: white;
+  font-weight: 800;
+  font-size: 30px;
 }
 
 .footer a:hover {
